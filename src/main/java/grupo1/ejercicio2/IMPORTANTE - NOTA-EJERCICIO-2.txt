@@ -1,0 +1,17 @@
+Nota sobre las mediciones
+
+Aprovechamos el ejercicio para comparar el ordenamiento usando un array, un ArrayList y un LinkedList,
+trabajando con los mismos valores para todos los casos, siguiendo la propuesta que hiciste durante la clase.
+
+En las primeras pruebas pasó algo extraño: la primera ejecución de Arrays.sort() tardaba mucho más que las siguientes.
+Entonces cambiamos el orden de los tamaños y vimos que el tiempo alto siempre aparecía en el primer caso ejecutado.
+
+Por eso, decidimos agregar un calentamiento previo y después hacer 10 ejecuciones de cada caso y tomar el promedio.
+
+Te adjuntamos unas capturas de pantalla para que veas las mediciones que obtuvimos antes de agregar el calentamiento.
+
+Sabemos que la idea del trabajo no era caer tanto en el caso concreto de las mediciones,
+pero nos resultó tan llamativo lo que estaba pasando que se nos terminó yendo el ejercicio
+un poco más allá de lo que habíamos planificado, je.
+
+¡Perdón!
