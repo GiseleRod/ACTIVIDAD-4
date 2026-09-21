@@ -1,35 +1,41 @@
-
-package ejercicio1;
+package grupo1.ejercicio1;
 
 public class AnalizadorArray {
-    private int[] lista;
 
-    public AnalizadorArray(int[] lista) {
-        this.lista = lista;
+    private final int[] numeros;
+
+    public AnalizadorArray(int[] numeros) {
+        this.numeros = numeros;
     }
 
-    public int[] buscarMaximo() {
-        int max = lista[0];
+    public ResultadoExtremo buscarMaximo() {
+
+        int max = numeros[0];
         int pos = 0;
-        for (int i = 1; i < lista.length; i++) {
-            if (lista[i] > max) {
-                max = lista[i];
+
+        for (int i = 1; i < numeros.length; i++) {
+            if (numeros[i] > max) {
+                max = numeros[i];
                 pos = i;
             }
         }
-        return new int[]{max, pos};
+
+        return new ResultadoExtremo(max, pos);
     }
 
-    public int[] buscarMinimo() {
-        int min = lista[0];
+    public ResultadoExtremo buscarMinimo() {
+
+        int min = numeros[0];
         int pos = 0;
-        for (int i = 1; i < lista.length; i++) {
-            if (lista[i] < min) {
-                min = lista[i];
+
+        for (int i = 1; i < numeros.length; i++) {
+            if (numeros[i] < min) {
+                min = numeros[i];
                 pos = i;
             }
         }
-        return new int[]{min, pos};
+
+        return new ResultadoExtremo(min, pos);
     }
 }
 

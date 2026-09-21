@@ -1,18 +1,24 @@
-
-package ejercicio1;
+package grupo1.ejercicio1;
 
 public class Main {
+
     public static void main(String[] args) {
+
         MiArray miArray = new MiArray(1000);
         miArray.llenarArray();
 
-        AnalizadorArray analizador = new AnalizadorArray(miArray.getLista());
+        AnalizadorArray analizador = new AnalizadorArray(miArray.getNumeros());
 
-        int[] maximo = analizador.buscarMaximo();
-        int[] minimo = analizador.buscarMinimo();
+        ResultadoExtremo maximo = analizador.buscarMaximo();
+        ResultadoExtremo minimo = analizador.buscarMinimo();
 
-        System.out.println("\nEl número más alto: " + maximo[0] + " en la posición: " + maximo[1]);
-        System.out.println("El número más bajo: " + minimo[0] + " en la posición: " + minimo[1]);
+        System.out.println(
+                "El número más alto es: " + maximo.getValor() + ", en la posición: " + maximo.getPosicion()
+        );
+
+        System.out.println(
+                "El número más bajo es: " + minimo.getValor() + ", en la posición: " + minimo.getPosicion()
+        );
     }
 }
 
