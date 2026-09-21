@@ -5,7 +5,6 @@ public class Main {
     public static void main(String[] args) {
         MiArray miArray = new MiArray(1000);
         miArray.llenarArray();
-        miArray.imprimirArray();
 
         AnalizadorArray analizador = new AnalizadorArray(miArray.getLista());
 
