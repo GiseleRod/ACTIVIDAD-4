@@ -24,9 +24,8 @@ public class MiArray {
         }
     }
 
-    // Getter para acceder al array desde otras clases
     public int[] getLista() {
-        return lista;
+        return lista.clone;
     }
 }
 
