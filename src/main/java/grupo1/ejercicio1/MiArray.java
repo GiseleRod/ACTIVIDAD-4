@@ -25,7 +25,7 @@ public class MiArray {
     }
 
     public int[] getLista() {
-        return lista.clone;
+        return lista.clone();
     }
 }
 
