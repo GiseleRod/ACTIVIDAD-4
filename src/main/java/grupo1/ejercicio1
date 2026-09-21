@@ -1,1 +1,45 @@
-.
+
+
+import java.util.Array;
+import java.util.Random;
+
+public class ArrayActividadN1 {
+
+    public static void main(String[] args) {
+        int[] lista = new int[1000];
+        Random ramdom = new Random();
+
+        for (int i = 0; i < 1000; i++){
+            lista[i] = ramdom.nextInt(1000) + 1;
+        }    
+        
+        
+        for(int i = 0; i < lista.length; i++){
+             System.out.println( "El número: " +  lista[i] + " esta en la posicion : " + i);
+        }
+        
+        int max = lista[0];
+        int min = lista[0];
+        int posicionMax = 0;
+        int posicionMin = 0;
+        
+        for(int i = 1; i < lista.length; i++){
+          int valor = lista[i];
+          
+          if (valor > max) {
+                max = valor;
+                posicionMax = i;
+            }
+            if (valor < min) {
+                min = valor;
+                posicionMin = i;
+            }
+        }
+
+        System.out.println(" ");
+        
+        System.out.println("El número más alto: " + max + " en la posición: " + posicionMax);
+        System.out.println("El número más bajo: " + min + " en la posición: " + posicionMin);
+
+    }
+}
